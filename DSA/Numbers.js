@@ -39,26 +39,47 @@
 
 // let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
 
-function largestNum(arr) {
-  let num = -Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > num) num = arr[i];
-  }
-  return num;
-}
+// function largestNum(arr) {
+//   let num = -Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > num) num = arr[i];
+//   }
+//   return num;
+// }
 
-console.log(largestNum(arr));
+// console.log(largestNum(arr));
 
 // Write a function that returns the largest number in an array
 
-let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
+// let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
 
-function smallestNum(arr) {
-  let num = Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < num) num = arr[i];
+// function smallestNum(arr) {
+//   let num = Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < num) num = arr[i];
+//   }
+//   return num;
+// }
+
+// console.log(smallestNum(arr));
+
+//Find the second Largest Number in an array
+
+let findArr = [];
+
+function secondLargestNum(findArr) {
+  if (findArr.length < 2) return "Array should have atleast two elements";
+  let fristLarge = -Infinity;
+  let secondLarge = -Infinity;
+  for (let i = 0; i < findArr.length; i++) {
+    if (findArr[i] > fristLarge) {
+      secondLarge = fristLarge;
+      fristLarge = findArr[i];
+    } else if (findArr[i] > secondLarge && findArr[i] != fristLarge) {
+      secondLarge = findArr[i];
+    }
   }
-  return num;
+  return secondLarge;
 }
 
-console.log(smallestNum(arr));
+console.log(secondLargestNum(findArr));
