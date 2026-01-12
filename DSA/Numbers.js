@@ -37,7 +37,7 @@
 
 // Write a function that returns the largest number in an array
 
-let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
+// let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
 
 function largestNum(arr) {
   let num = -Infinity;
@@ -48,3 +48,17 @@ function largestNum(arr) {
 }
 
 console.log(largestNum(arr));
+
+// Write a function that returns the largest number in an array
+
+let arr = [23, 45, 34, 56, 0, 9, -1, -90, 21, -22, 0];
+
+function smallestNum(arr) {
+  let num = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < num) num = arr[i];
+  }
+  return num;
+}
+
+console.log(smallestNum(arr));
