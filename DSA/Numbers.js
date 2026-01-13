@@ -76,6 +76,7 @@ function secondLargestNum(findArr) {
       secondLarge = fristLarge;
       fristLarge = findArr[i];
     } else if (findArr[i] > secondLarge && findArr[i] != fristLarge) {
+      //If we have duplicates put this  findArr[i] != fristLarge
       secondLarge = findArr[i];
     }
   }
