@@ -84,3 +84,15 @@ function secondLargestNum(findArr) {
 }
 
 console.log(secondLargestNum(findArr));
+
+// Loopd inside loop
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < i; j++) {
+    console.log(i, j);
+  }
+}
+/*output: 1 0
+          2 0
+          2 1 
+          */
