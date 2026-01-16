@@ -56,9 +56,8 @@ for (let i = 0; i < n; i--) {
 // 4444
 // 55555
 
-let n = 5;
 for (let i = 0; i < n; i++) {
-  let row = "";
+  let row = "-";
   for (let j = 0; j < n - i; j++) {
     row = row + (j + 1);
   }
@@ -71,3 +70,23 @@ for (let i = 0; i < n; i++) {
 // 123
 // 12
 // 1
+
+for (let i = 0; i < n; i++) {
+  let row = " ";
+
+  //this is adding empty spaces
+  for (let j = 0; j < n - (i + 1); j++) {
+    row = row + "-";
+  }
+  //adding stars
+  for (let k = 0; k < i + 1; k++) {
+    row = row + "*";
+  }
+  console.log(row);
+}
+//output
+//     *
+//    **
+//   ***
+//  ****
+// *****
