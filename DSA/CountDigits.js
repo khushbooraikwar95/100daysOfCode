@@ -2,6 +2,7 @@
 function countDigits(num) {
   let count = 0;
   if (num == 0) return 1;
+  //changing negetive number to possitive
   num = Math.abs(num);
   while (num > 0) {
     num = Math.floor(num / 10);
